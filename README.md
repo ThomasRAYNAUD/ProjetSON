@@ -1,1 +1,3 @@
-# ProjetSON
+# Projet SON
+
+## Le contexte
