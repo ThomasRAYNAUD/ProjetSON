@@ -21,9 +21,9 @@ Ce programme peut servir de base pour l'implémentation d'un système haut-parle
 - Résistance de tirage (10 kΩ)
 
 ## 5. Code :
-- """MyDsp.h""" contient les définitions de fonctions et de variables.
-- """MyDsp.cpp""" contient le code des fonctions et le traitement audio réalisé par le teensy.
-- """active_noise_reduction.ino""" permet de gérer les entrées/sorties du teensy.
+- ``MyDsp.h`` contient les définitions de fonctions et de variables.
+- ``MyDsp.cpp`` contient le code des fonctions et le traitement audio réalisé par le teensy.
+- ``active_noise_reduction.ino`` permet de gérer les entrées/sorties du teensy.
 
 
 ## Sources consultées
