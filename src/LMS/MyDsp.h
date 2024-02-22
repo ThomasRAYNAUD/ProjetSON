@@ -1,0 +1,41 @@
+#ifndef faustteensy_h
+#define faustteensy_h
+#define NUM_COEFFICIENTS 256
+#define AUDIO_OUTPUTS 1
+
+#include "Arduino.h"
+#include "AudioStream.h"
+#include "Audio.h"
+
+#include "Noise.h"
+#include "OneZero.h"
+
+class MyDsp : public AudioStream
+{
+  public:
+    MyDsp();
+    ~MyDsp();
+
+    virtual void update(void);
+    void LMS(float sample);
+    void pushInput(float sample);
+    void outputSys();
+    void adaptativeFilter();
+    void outputError();
+    void correctionCoef();
+    int boutonPin;
+    bool boutonEtat;
+    bool lireEtatBouton();
+
+  private:
+    Noise noise;
+    OneZero oneZero;
+    float adaptSignal;
+    float error ;
+    float output_H ;
+    float input[NUM_COEFFICIENTS] ;
+    float coefficients[NUM_COEFFICIENTS];
+    double mu;
+};
+
+#endif
